@@ -1,0 +1,210 @@
+body {
+    background-color: rgb(198, 198, 203);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.barrasuperior {
+  background: linear-gradient(to right, #04021e, #07034b);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px 0px 30px #7f7f7f8c;
+  margin: -8px;
+}
+
+/* Logo */
+.logo img {
+  margin-left: 20px;
+  height: 60px;
+}
+
+/* Menu de navegação */
+.menu-navegacao {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-navegacao a {
+  background-color: #32358796;
+  color: azure;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+  transform: translateY(-3px);
+  background-color: #07034b;
+}
+
+.menu-navegacao a:active {
+  transform: translateY(0);
+}
+
+/* Hambúrguer (ícone de menu) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: azure;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* Checkbox oculto */
+.menu-toggle {
+  display: none;
+}
+
+
+/* Seção principal com imagem e texto */
+.corpo {
+    justify-items: center;
+}
+.corpo h1 {
+    color: #07034b;
+}
+.divisao {
+  background-color: azure;
+  box-shadow: 0 0 18px #04021e;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
+  align-items: center;
+}
+.divisao:hover {
+    transform: translateY(-4px);
+}
+.divisao:active {
+    transform: translateY(0);
+}
+
+.divisao img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 100px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.texto {
+  flex: 1;
+  min-width: 250px;
+}
+a {
+    text-decoration: none;
+}
+
+.nome {
+  color: #07034b;
+}
+
+.função {
+  color: #07034b;
+  font-weight: bold;
+}
+
+.escolaridade {
+  color: #555;
+}
+/* Rodapé */
+.rodape {
+    background: linear-gradient(to right, #04021e, #07034b);
+    color: azure;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.social, .contato2 {
+    flex: 1 1 250px;
+    min-width: 250px;
+    justify-items: center;
+}
+.empresa {
+    flex: 1 1 250px;
+    min-width: 250px;
+}
+.empresa h1 {
+    color: azure;
+}
+
+.social a {
+    display: flex;
+}
+.social img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.direitos {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid azure;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .menu-navegacao {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(to right, #04021e, #07034b);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .menu-toggle:checked ~ .menu-navegacao {
+        max-height: 300px;
+    }
+    .menu-navegacao a {
+        margin: 0;
+        padding: 16px;
+        text-align: center;
+        border-radius: 0;
+    }
+    .menu-navegacao a:hover {
+        transform: translateY(0);
+        background-color: #32358796;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .empresa, .social, .contato2 {
+        text-align: center;
+    }
+}
