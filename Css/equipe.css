@@ -126,6 +126,7 @@ a {
     background: linear-gradient(to right, #04021e, #07034b);
     color: azure;
     padding: 40px 20px;
+    margin: -8px;
 }
 
 .footer-container {
@@ -211,3 +212,4 @@ a {
         font-size: 0.8rem;
         padding: 6px 0;
     }
+  }
